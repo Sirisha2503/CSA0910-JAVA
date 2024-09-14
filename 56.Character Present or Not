@@ -1,0 +1,7 @@
+public class CheckCharacter {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        char ch = 'W';
+        System.out.println(str.indexOf(ch) >= 0 ? "Character is present" : "Character is not present");
+    }
+}
