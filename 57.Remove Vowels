@@ -1,0 +1,8 @@
+public class Removevowels{
+    public static void main(String[] args)
+    {
+String input="hey siri";
+String n1=input.replaceAll("[aeiouAEIOU]","");
+System.out.println(n1);
+}
+}
