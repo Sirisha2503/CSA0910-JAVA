@@ -1,0 +1,13 @@
+public class Username{
+    public static void main(String[] args){
+        String S1="siri";
+        String S2="siri";
+        if(S1.equals (S2))
+        {
+            System.out.println("yes,username is valid");
+        }
+        else {
+            System.out.println("no,username is not valid");
+        }
+    }
+}
