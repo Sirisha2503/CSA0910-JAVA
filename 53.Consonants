@@ -1,0 +1,8 @@
+public class Consonants{
+    public static void main(String[] args){
+        String a="saveetha school of engineering";
+        for(char ch : a.toCharArray())
+        if("AEIOUaeiou".indexOf(ch)==-1)
+        System.out.println(ch+"");
+    }
+}
