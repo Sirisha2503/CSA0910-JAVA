@@ -1,0 +1,13 @@
+class class2{
+    String name="saveetha";
+    public void printing(){
+        System.out.println("saveetha is a deemed university:");
+    }
+}
+public class Main extends class2{
+    public static void main(String[] args){
+        Main obj = new Main();
+        System.out.println("the name is:"+obj.name);
+        obj.printing();
+    }
+}
