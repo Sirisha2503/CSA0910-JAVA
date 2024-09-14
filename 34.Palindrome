@@ -1,0 +1,10 @@
+public class Palindrome{
+    public static void main(String[] args){
+        String s1="MADAM";
+        String s2="MADAM";
+        if(s1.equals(s2))
+        System.out.print("Palindrome");
+        else
+        System.out.print("Not palindrome");
+    }
+}
