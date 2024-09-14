@@ -1,0 +1,9 @@
+public class Binaryconversion{
+    public static void main(String[] args){
+        String bin="0111";
+int dec=Integer.parseInt(bin,2);
+System.out.println("Decimal: "+dec);
+String oct=Integer.toOctalString(dec);
+System.out.println("Octal: "+oct);
+}
+}
