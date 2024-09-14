@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class A extends Thread{
+    public void run(){
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println(n+"x"+i+"="+(n*i));
+        }
+    }
+}
+class B extends Thread{
+    public void run(){
+        int n=10;
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println(n+"x"+i+"="+(n*i));
+        }
+    }
+}
+public class siri{
+    public static void main(String[] args)
+    {
+        Scanner input=new Scanner(System.in);
+        A ThreadA=new A();
+        B ThreadB=new B();
+        ThreadA.start();
+        ThreadB.start();
+    }
+}
