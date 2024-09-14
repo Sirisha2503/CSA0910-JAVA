@@ -1,0 +1,7 @@
+public class DecimalConverter {
+    public static void main(String[] args) {
+        int decimal = 7;
+        System.out.println("Binary Number = " + Integer.toBinaryString(decimal));
+        System.out.println("Octal = " + Integer.toOctalString(decimal));
+    }
+}
