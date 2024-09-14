@@ -1,0 +1,7 @@
+public class SquareRoot {
+    public static void main(String[] args) {
+        int num = 6561;
+        int sqrt = (int) Math.sqrt(num);
+        System.out.println("Square Root: " + sqrt + ", -" + sqrt);
+    }
+}
