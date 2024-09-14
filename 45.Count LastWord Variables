@@ -1,0 +1,13 @@
+public class LastWord  {
+    public static void main(String[] args) {
+        String name = "hi siri";
+        name = name.trim(); 
+        int len = 0;
+        for (int i = name.length() - 1; i >= 0; i--) {
+            if (name.charAt(i) == ' ')
+                break;
+            len++;
+        }
+        System.out.println(len);
+    }
+}
