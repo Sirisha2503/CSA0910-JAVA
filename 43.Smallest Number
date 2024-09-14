@@ -1,0 +1,9 @@
+import java.util.Arrays;
+public class Smallest{
+    public static void main(String[] args){
+int a[] = {14, 67, 48, 23, 5, 62};
+int len = a.length;
+Arrays.sort(a);
+System.out.println(" Smallest number: " + a[0]);
+}
+}
