@@ -1,0 +1,23 @@
+public class Composite {
+    public static void main(String[] args) {
+        int a = 2;
+        int b = 4;
+        for (int i = a; i <= b; i++) {
+            boolean isComposite = true;
+            if (i < 2) {
+                isComposite = false;
+            }
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    isComposite = false;
+                    break;
+                }
+            }
+            if (!isComposite) {
+                System.out.println(i + " is a composite.");
+            } else {
+                System.out.println(i + " is not a composite.");
+            }
+        }
+    }
+}
