@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Siri {
+    public static void main(String[] args) {
+        int n = 5;
+        int[] a = {1, 2, 2, 3, 4};
+        int i, j;
+
+        System.out.println("Original array: " + Arrays.toString(a));
+
+        for (i = 0; i < n; i++) {
+            for (j = i + 1; j < n; j++) {
+                if (a[i] == a[j]) {
+                    System.out.println(a[j]);
+                }
+            }
+        }
+    }
+}
