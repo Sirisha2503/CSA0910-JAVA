@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class CharacterCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int upper = 0, lower = 0, digits = 0;
+        char ch;
+
+        System.out.println("Enter * to exix");
+        while ((ch = scanner.next().charAt(0)) != '*') {
+            if (ch >= 'A' && ch <= 'Z') upper++;
+            else if (ch >= 'a' && ch <= 'z') lower++;
+            else if (ch >= '0' && ch <= '9') digits++;
+        }
+
+        System.out.println("Total lower: " + lower + "\nTotal upper: " + upper + "\nTotal numbers: " + digits);
+    }
+}
