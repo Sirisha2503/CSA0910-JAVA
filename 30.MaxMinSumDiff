@@ -1,0 +1,13 @@
+import java.util.Arrays;
+
+public class MaxMin {
+    public static void main(String[] args) {
+        int[] array = {4, 3, 1, 7, 9};
+        Arrays.sort(array);
+        int min = array[1];
+        int max = array[array.length - 2];
+        int sum = max + min;
+        int difference = max - min;
+        System.out.printf("Max: %d\n Min: %d\n Sum: %d\n Difference: %d\n", max, min, sum, difference);
+    }
+}
