@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class PosNeg {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n, posCount = 0, negCount = 0, posSum = 0, negSum = 0;
+        
+        while ((n = input.nextInt()) != -1) {
+            if (n > 0) {
+                posCount++;
+                posSum += n;
+            } else if (n < 0) {
+                negCount++;
+                negSum += n;
+            }
+        }
+        
+        if (posCount > 0) 
+            System.out.println("Average of positive: " + (double) posSum / posCount);
+        if (negCount > 0) 
+            System.out.println("Average of negative: " + (double) negSum / negCount);
+    }
+}
