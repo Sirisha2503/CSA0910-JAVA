@@ -1,0 +1,139 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Player {
+    private String name;
+    private String team;
+
+    public Player(String name, String team) {
+        this.name = name;
+        this.team = team;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+}
+
+public class IPLRetention4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Player> players = new ArrayList<>();
+
+        System.out.println("Enter the number of players:");
+        int numOfPlayers = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+        for (int i = 0; i < numOfPlayers; i++) {
+            System.out.println("Enter player name:");
+            String playerName = scanner.nextLine();
+
+            System.out.println("Enter team name:");
+            String teamName = scanner.nextLine();
+
+            players.add(new Player(playerName, teamName));
+        }
+
+        int choice = 0;
+while (choice != 4) {
+            System.out.println("Choose an option:");
+            System.out.println("1. Display teams and players");
+            System.out.println("2. Retain players");
+            System.out.println("3. Release players");
+            System.out.println("4. Exit");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    displayTeamsAndPlayers(players);
+                    break;
+                case 2:
+                    retainPlayers(scanner, players);
+                    break;
+                case 3:
+                    releasePlayers(scanner, players);
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please choose again.");
+            }
+        }
+    }
+
+    private static void displayTeamsAndPlayers(List<Player> players) {
+        System.out.println("Teams and Players:");
+        for (Player player : players) {
+            System.out.println(player.getName() + " - " + player.getTeam());
+        }
+    }
+
+    private static void retainPlayers(Scanner scanner, List<Player> players) {
+        System.out.println("Enter the team name for retention:");
+        String teamToRetain = scanner.nextLine();
+
+        List<Player> retainedPlayers = new ArrayList<>();
+        List<Player> releasedPlayers = new ArrayList<>();
+
+        for (Player player : players) {
+            if (player.getTeam().equals(teamToRetain)) {
+                System.out.println("Do you want to retain " + player.getName() + "? (yes/no)");
+                String choice = scanner.nextLine();
+                if (choice.equalsIgnoreCase("yes")) {
+                    player.setTeam(teamToRetain);
+                    retainedPlayers.add(player);
+                } else {
+                    releasedPlayers.add(player);
+                }
+            }
+        }
+
+        System.out.println("Retained Players for " + teamToRetain + ":");
+        for (Player player : retainedPlayers) {
+            System.out.println(player.getName() + " - " + player.getTeam());
+        }
+
+        System.out.println("Released Players:");
+        for (Player player : releasedPlayers) {
+            players.remove(player);
+        }
+    }
+
+    private static void releasePlayers(Scanner scanner, List<Player> players) {
+        System.out.println("Enter the team name for release:");
+        String teamToRelease = scanner.nextLine();
+
+        List<Player> retainedPlayers = new ArrayList<>();
+        List<Player> releasedPlayers = new ArrayList<>();
+
+        for (Player player : players) {
+            if (player.getTeam().equals(teamToRelease)) {
+                System.out.println("Do you want to release " + player.getName() + "? (yes/no)");
+                String choice = scanner.nextLine();
+                if (choice.equalsIgnoreCase("yes")) {
+                    releasedPlayers.add(player);
+                } else {
+                    retainedPlayers.add(player);
+                }
+            }
+        }
+        System.out.println("Released Players for " + teamToRelease + ":");
+        for (Player player : releasedPlayers) {
+            players.remove(player);
+        }
+ System.out.println("Retained Players:");
+        for (Player player : retainedPlayers) {
+            System.out.println(player.getName() + " - " + player.getTeam());
+        }
+    }
+}
