@@ -1,0 +1,23 @@
+public class Stats {
+    public static void main(String[] args) {
+        int[] arr = {16, 18, 27, 16, 23, 21, 19};
+        int sum = 0, mode = arr[0], maxCount = 0;
+        for (int i = 0; i < arr.length; i++) 
+        {
+            sum += arr[i];
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) 
+            if (arr[i] == arr[j]) 
+            count++;
+            if (count > maxCount) 
+            {
+                maxCount = count; 
+                mode = arr[i];
+                }
+        }
+        java.util.Arrays.sort(arr);
+        System.out.println("Mean = " + sum / arr.length);
+        System.out.println("Median = " + arr[arr.length / 2]);
+        System.out.println("Mode = " + mode);
+    }
+}
