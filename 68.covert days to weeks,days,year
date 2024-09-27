@@ -1,0 +1,11 @@
+public class Convert{
+    public static void main(String[] args){
+int num=756;
+int years=num/365;
+System.out.println("years: "+years);
+int weeks=(num%365)/7;
+System.out.println("weeks: "+weeks);
+int days=(num%365)%7;
+System.out.println("Days: "+days);
+}
+}
