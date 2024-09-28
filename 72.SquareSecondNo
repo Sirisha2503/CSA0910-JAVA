@@ -1,0 +1,10 @@
+public class SquareSecondNo{
+  public static void main(String[] args){
+int lower=2;
+int upper=10;
+for(int i=lower;i<=upper;i++)
+{
+ System.out.println(i+","+(i*i));
+}
+}
+}
